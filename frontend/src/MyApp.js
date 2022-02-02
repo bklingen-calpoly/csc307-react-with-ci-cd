@@ -7,7 +7,7 @@ function MyApp() {
   const [characters, setCharacters] = useState([]);
 
   // const API_BASE_URL = 'http://localhost:5000';
-  const API_BASE_URL = "https://csc307-api.herokuapp.com";
+  const API_BASE_URL = "https://csc307-api-bklingen.herokuapp.com";
 
   useEffect(() => {
     fetchAll().then((result) => {
