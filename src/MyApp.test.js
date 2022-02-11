@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-q;
+
 import App from "./MyApp";
 
 test("renders page with Submit button", () => {
