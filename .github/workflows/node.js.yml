@@ -39,3 +39,4 @@ jobs:
           heroku_app_name: "csc307-frontend-bklingen"
           heroku_email: "bklingen@calpoly.edu"
           appdir: "frontend"
+          test
