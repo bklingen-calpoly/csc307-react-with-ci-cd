@@ -5,6 +5,6 @@ import App from "./MyApp";
 
 test("renders page with Submit button", () => {
   render(<App />);
-  const linkElement = screen.getByText(/xubmit/i);
+  const linkElement = screen.getByText(/Submit/i);
   expect(linkElement).toBeInTheDocument();
 });
