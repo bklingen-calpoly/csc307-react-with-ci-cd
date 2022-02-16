@@ -52,7 +52,7 @@ function MyApp() {
       }
     });
   }
-
+  //test
   return (
     <div className="container">
       <Table characterData={characters} removeCharacter={removeOneCharacter} />
