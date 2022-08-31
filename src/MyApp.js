@@ -1,23 +1,25 @@
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
-import Table from './Table';
-import Form from './Form';
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import Table from "./Table";
+import Form from "./Form";
 
-function MyApp () {
+function MyApp() {
   const [characters, setCharacters] = useState([]);
 
   // const API_BASE_URL = 'http://localhost:5000';
-  const API_BASE_URL = 'https://csc307-api.herokuapp.com';
+  const API_BASE_URL = "https://csc307-api-bklingen.herokuapp.com";
 
   useEffect(() => {
-    fetchAll().then(result => {
-      if (result) { setCharacters(result) }
-    })
+    fetchAll().then((result) => {
+      if (result) {
+        setCharacters(result);
+      }
+    });
   }, []);
 
-  async function fetchAll () {
+  async function fetchAll() {
     try {
-      const response = await axios.get(API_BASE_URL+'/users');
+      const response = await axios.get(API_BASE_URL + "/users");
       return response.data.users_list;
     } catch (error) {
       // We're not handling errors. Just logging into the console.
@@ -26,9 +28,9 @@ function MyApp () {
     }
   }
 
-  async function makePostCall (person) {
+  async function makePostCall(person) {
     try {
-      const response = await axios.post(API_BASE_URL+'/users', person);
+      const response = await axios.post(API_BASE_URL + "/users", person);
       return response;
     } catch (error) {
       console.log(error);
@@ -36,25 +38,27 @@ function MyApp () {
     }
   }
 
-  function removeOneCharacter (index) {
+  function removeOneCharacter(index) {
     const updated = characters.filter((character, i) => {
       return i !== index;
-    })
+    });
     setCharacters(updated);
   }
 
-  function updateList (person) {
-    makePostCall(person).then(result => {
-      if (result && result.status === 200) { setCharacters([...characters, person]) }
-    })
+  function updateList(person) {
+    makePostCall(person).then((result) => {
+      if (result && result.status === 200) {
+        setCharacters([...characters, person]);
+      }
+    });
   }
 
   return (
-    <div className='container'>
+    <div className="container">
       <Table characterData={characters} removeCharacter={removeOneCharacter} />
       <Form handleSubmit={updateList} />
     </div>
-  )
+  );
 }
 
 export default MyApp;
