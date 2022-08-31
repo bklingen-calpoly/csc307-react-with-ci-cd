@@ -5,7 +5,7 @@ name: react frontend CI/CD
 
 on:
   push:
-    branches: [mainm, gh-pages]
+    branches: [main, gh-pages]
   pull_request:
     branches: [main, gh-pages]
 
