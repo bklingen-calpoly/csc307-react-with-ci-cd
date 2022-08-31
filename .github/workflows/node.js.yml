@@ -5,12 +5,12 @@ name: Node.js CI
 
 on:
   push:
-    branches: [main]
+    branches: [mainm, gh-pages]
   pull_request:
-    branches: [main]
+    branches: [main, gh-pages]
 
 jobs:
-  build:
+  deploy_frontend:
     runs-on: ubuntu-latest
 
     strategy:
@@ -28,8 +28,8 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
-      - uses: akhileshns/heroku-deploy@v3.12.12
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "csc307-frontend-bklingen"
-          heroku_email: "bklingen@calpoly.edu"
+#        deploy_key: ${{ secrets.REACT_DEPLOY_KEY }}
+#        publish_dir: ./frontend/build
