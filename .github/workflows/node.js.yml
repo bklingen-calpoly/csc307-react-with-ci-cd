@@ -25,7 +25,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - run: npm ci
+      # - run: npm ci
+      - name: Install Packages # remember the frontend directory context
+        # working-directory: ./frontend
+        run: npm install --legacy-peer-deps
       - run: npm run build --if-present
       - run: npm test
       - name: Deploy to gh-pages
