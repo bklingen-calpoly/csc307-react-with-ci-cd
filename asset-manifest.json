@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/csc307-react-with-ci-cd/static/css/main.40f025c2.chunk.css",
-    "main.js": "/csc307-react-with-ci-cd/static/js/main.3caef6cf.chunk.js",
-    "main.js.map": "/csc307-react-with-ci-cd/static/js/main.3caef6cf.chunk.js.map",
+    "main.js": "/csc307-react-with-ci-cd/static/js/main.c5141ccf.chunk.js",
+    "main.js.map": "/csc307-react-with-ci-cd/static/js/main.c5141ccf.chunk.js.map",
     "runtime-main.js": "/csc307-react-with-ci-cd/static/js/runtime-main.8fe93fa7.js",
     "runtime-main.js.map": "/csc307-react-with-ci-cd/static/js/runtime-main.8fe93fa7.js.map",
     "static/js/2.0d0cbcd7.chunk.js": "/csc307-react-with-ci-cd/static/js/2.0d0cbcd7.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.8fe93fa7.js",
     "static/js/2.0d0cbcd7.chunk.js",
     "static/css/main.40f025c2.chunk.css",
-    "static/js/main.3caef6cf.chunk.js"
+    "static/js/main.c5141ccf.chunk.js"
   ]
 }
