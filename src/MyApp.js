@@ -6,6 +6,7 @@ import Form from "./Form";
 function MyApp() {
   const [characters, setCharacters] = useState([]);
 
+  // todo: make this an environment variable
   // const API_BASE_URL = 'http://localhost:5000';
   const API_BASE_URL = "https://csc307-api-bklingen.herokuapp.com";
 
