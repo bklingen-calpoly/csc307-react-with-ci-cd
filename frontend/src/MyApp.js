@@ -8,7 +8,7 @@ import axios from "axios";
 function MyApp() {
   // const API_BASE_URL = 'http://localhost:5000/users';
   // const API_BASE_URL = "https://csc307-api-bklingen.herokuapp.com/users";
-  const API_BASE_URL = "https://csc307-backend.azurewebsites.net/";
+  const API_BASE_URL = "https://csc307-backend.azurewebsites.net/users";
   // const API_BASE_URL = "https://azure-csc307-api.azurewebsites.net/";
 
   const [characters, setCharacters] = useState([]);
