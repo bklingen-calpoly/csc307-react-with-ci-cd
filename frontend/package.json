@@ -7,6 +7,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.4",
+    "dotenv": "^16.3.1",
     "package.json": "^2.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -15,10 +16,10 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-scripts  --openssl-legacy-provider start",
+    "build": "react-scripts  --openssl-legacy-provider build",
+    "test": "react-scripts  --openssl-legacy-provider test",
+    "eject": "react-scripts  --openssl-legacy-provider eject"
   },
   "eslintConfig": {
     "extends": [

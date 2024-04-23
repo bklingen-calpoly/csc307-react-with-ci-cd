@@ -3,12 +3,12 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import Table from "./Table";
 import Form from "./Form";
 import axios from "axios";
-//   force ci run again
 
 function MyApp() {
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
   // const API_BASE_URL = 'http://localhost:5000/users';
   // const API_BASE_URL = "https://csc307-api-bklingen.herokuapp.com/users";
-  const API_BASE_URL = "https://csc307-backend.azurewebsites.net/users";
+  // const API_BASE_URL = "https://csc307-backend.azurewebsites.net/users";
   // const API_BASE_URL = "https://azure-csc307-api.azurewebsites.net/users";
 
   const [characters, setCharacters] = useState([]);
@@ -41,6 +41,7 @@ function MyApp() {
 
   async function fetchAll() {
     try {
+      console.log("base_url :" + API_BASE_URL);
       const response = await axios.get(API_BASE_URL);
       return response.data.users_list;
     } catch (error) {
