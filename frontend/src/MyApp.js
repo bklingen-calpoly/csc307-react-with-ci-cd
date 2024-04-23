@@ -37,6 +37,7 @@ function MyApp() {
     fetchAll().then((result) => {
       if (result) setCharacters(result);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function fetchAll() {
