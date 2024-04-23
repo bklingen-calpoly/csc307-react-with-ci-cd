@@ -1,4 +1,4 @@
-name: Azure Static Web Apps CI/CD
+name: React Frontend Azure Static Web Apps CI/CD
 
 on:
   push:
@@ -42,4 +42,5 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_CALM_MEADOW_0266E821E }}
+          app_location: "/frontend" # App source code path
           action: "close"
