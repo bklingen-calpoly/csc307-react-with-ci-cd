@@ -1,5 +1,8 @@
 name: React Frontend AWS S3 Web App CI/CD
 
+defaults:
+  run:
+    working-directory: frontend
 on:
   push:
     branches:
@@ -14,7 +17,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest] # macos-latest, windows-latest
-        node-version: [18.x]
+        node-version: [20.x]
 
     runs-on: ${{ matrix.os }} # ubuntu-latest
 
