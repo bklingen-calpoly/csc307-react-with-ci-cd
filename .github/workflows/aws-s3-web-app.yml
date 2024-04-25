@@ -1,8 +1,5 @@
 name: React Frontend AWS S3 Web App CI/CD
 
-defaults:
-  run:
-    working-directory: frontend
 on:
   push:
     branches:
@@ -20,6 +17,10 @@ jobs:
         node-version: [20.x]
 
     runs-on: ${{ matrix.os }} # ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: frontend
 
     steps:
       - name: Checkout code
